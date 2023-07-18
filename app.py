@@ -3,7 +3,7 @@ import os
 
 from ChatAI import cv_chat
 
-app = Flask(__name__, static_folder='./build', static_url_path='/')
+app = Flask(__name__, static_folder='../build', static_url_path='/')
 app.config['JSONIFY_MIMETYPE'] = 'application/json'
 
 
