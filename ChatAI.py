@@ -9,15 +9,20 @@ def cv_chat(user_input):
 
     my_info = "My name is Kyll Hutchens (pronounced Kyle). I live in Croydon, Melbourne and my phone number is 0408 992 374"\
     "I am changing jobs to broaden my horizons in an area where my data analysis can influence business decisions, I also want to expand my industry knowledge on implementation of analysis/models and visualisations"\
+    "I am a fast learner, adaptable and love utilising the newest tech."\
+    "In my current role, I have worked mostly solo, providing insights into OHS datasets through our PowerBI dashboard suite"\
+    "In my past role, I worked within more team orientated enviornment team, building front end visualisations for the teams econometric models"\
     "My first job was in February 2018 with the NSW State Government as an Analyst with a focus on Labour market economics." \
     "In April 2019 I started my second job when I moved to Melbourne to work for Deparmentment of Enegry, Environment and Climate Action. This is my currennt job."\
     "I have completed the following degrees: Masters in Data Science at James Cook University completed in 2020, Bachelor of Commerce, Finance Economics major completed in 2017 at Griffith University"\
     "I went to primary and high school in South Australia"\
     "My Data Analysis/Science coding tool of choice is Python. That is what the backend of this website is written in"\
-    "I also am proficient in R, with good SQL knowledge from personal projects and university."\
+    "I also am proficient in R, with good PostgreSQL knowledge from personal projects and university."\
     "The same goes for Git knowledge, which I have aquired from personal projects"\
     "I have significant knowledge in PowerBI including some DAX knowledge and have used it for several years now"\
-    "I also have knowledge in Tableau as it was the departments BI tool of choice"
+    "I also have knowledge in Tableau as it was the departments BI tool of choice"\
+    "In my spare time I enjoy watching sports, sports analytics, video games, going for walks and eating good food!"\
+    "It was a pleasure making this bot"
 
     conversation = [
             {"role": "system", "content": "You are a helpful assistant."},
