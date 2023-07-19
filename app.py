@@ -31,7 +31,7 @@ def chat():
 @app.route('/api/funfact', methods=['POST'])
 def ffchat():
     response_string = [
-        "I have a dog named Moze, she is named after Dwight's brother from The Office.",
+        "I have a dog named Moze, she is named after Dwight's cousin from The Office.",
         "I grew up in Outback South Australia.",
         "I got married earlier this year.",
         "When I was five I broke my leg, while I had a broken thumb, within days of each other.",
