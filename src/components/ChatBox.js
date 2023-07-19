@@ -27,6 +27,29 @@ const ChatBox = () => {
         console.error('Error:', error);
       });
   };
+    const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      sendPageInfo(); // Trigger the "Send Message" button click
+    }
+  };
+  const fetchFunFact = () => {
+    axios
+      .post('/api/funfact') // Make a POST request to the Flask endpoint
+      .then(response => {
+        console.log('Fun Fact:', response.data);
+
+        const funFactResponse = `${response.data.message}`;
+
+        const newChatEntry = { user: 'Here is a fun fact about Kyll: ', ai: funFactResponse };
+        const updatedChatHistory = [...chatHistory, newChatEntry];
+        const trimmedChatHistory = updatedChatHistory.slice(-5);
+
+        setChatHistory(trimmedChatHistory);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  };
 
   return (
     <div className="main-content">
@@ -35,7 +58,7 @@ const ChatBox = () => {
         <textarea
           className="textarea"
           readOnly
-          value={chatHistory.map(entry => entry.user + '\n' + entry.ai).join('\n\n')} // Add two newline characters between each entry
+          value={chatHistory.map(entry => entry.user + '\n' + entry.ai).join('\n\n')}
         />
       </div>
       <div className="input-group">
@@ -44,8 +67,10 @@ const ChatBox = () => {
           placeholder="What would you like to ask?"
           value={pageId}
           onChange={e => setPageId(e.target.value)}
+          onKeyDown={handleKeyPress} // Handle Enter key press
         />
-        <Button onClick={sendPageInfo}>Send Message</Button>
+        <Button onClick={sendPageInfo}>Ask Question</Button>
+        <Button onClick={fetchFunFact} variant="secondary">Fun Fact!</Button>
       </div>
     </div>
   );

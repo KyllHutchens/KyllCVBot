@@ -7,10 +7,10 @@ function Sidebar() {
       <h5></h5>
       <ul className="nav flex-column">
         <li className="nav-item">
-          <Link className="nav-link" to="/">Link to Github</Link> 
+          <Link className="nav-link" to="https://github.com/KyllHutchens/KyllCVBot">Link to Github</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/add-calendar">Contact Details</Link> 
+          <Link className="nav-link" to="/contact-details">Contact Details</Link>
         </li>
       </ul>
     </div>

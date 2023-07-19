@@ -37,3 +37,7 @@
 .input-group input{
   flex-grow: 1;
 }
+
+.wider-modal {
+  width: 120%; /* Set the desired width here */
+}

@@ -8,10 +8,14 @@ def cv_chat(user_input):
     openai.api_key = os.getenv("openai.api_key")
 
     my_info = "My name is Kyll Hutchens I live in Croydon, Melbourne and my phone number is 0408 992 374"\
-    "I started working in February 2018 with the NSW State Government as an Analyst with a focus on Labour market economics." \
-            "In April 2019 I moved to Melbourne to work for Deparmentment of Enegry, Environment and Climate Action. This takes me to the current day"\
-    "I have a Masters in Data Science completed in 2020 and a Bachelor of Commerce, Finance Economics major in 2017"\
-    "I have expertise in python programming and visualizations in both powerBI and Tableau"
+    "My first job was in February 2018 with the NSW State Government as an Analyst with a focus on Labour market economics." \
+            "In April 2019 I started my second job when I moved to Melbourne to work for Deparmentment of Enegry, Environment and Climate Action. This is my currennt job."\
+    "I have completed the following degrees: Masters in Data Science from James Cook University completed in 2020, Bachelor of Commerce, Finance Economics major completed in 2017"\
+    "My Data Analysis/Science coding tool of choice is Python. That is what the backend of this website is written in"\
+    "I also am proficient in R, with good SQL knowledge from personal projects and university."\
+    "The same goes for Git knowledge, which I have aquired from personal projects"\
+    "I have significant knowledge in PowerBI including some DAX knowledge and have used it for several years now"\
+    "I also have knowledge in Tableau as it was the departments BI tool of choice"
 
     conversation = [
             {"role": "system", "content": "You are a helpful assistant."},
