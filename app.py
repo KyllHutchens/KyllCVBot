@@ -34,7 +34,7 @@ def ffchat():
         "I have a dog named Moze, she is named after Dwight's cousin from The Office.",
         "I grew up in Outback South Australia.",
         "I got married earlier this year.",
-        "When I was five I broke my leg, while I had a broken thumb, within days of each other.",
+        "When I was five I broke my leg, just a few days after breaking my thumb",
         "My love for data and numbers started in AFL and Cricket.",
         "During COVID I created a neural network model to predict daily fantasy AFL rankings. It went 'ok'.",
         "This website was originally a test for a calendar chatbot.",
