@@ -64,7 +64,7 @@ const ChatBox = () => {
       <div className="input-group">
         <input
           type="text"
-          placeholder="What would you like to ask?"
+          placeholder="What would you like to ask? Consider asking about projects I've worked on or Why I am looking to change jobs"
           value={pageId}
           onChange={e => setPageId(e.target.value)}
           onKeyDown={handleKeyPress} // Handle Enter key press

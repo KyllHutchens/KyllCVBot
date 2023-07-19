@@ -9,10 +9,14 @@ def cv_chat(user_input):
 
     my_info = "My name is Kyll Hutchens (pronounced Kyle). I live in Croydon, Melbourne and my phone number is 0408 992 374"\
     "I am changing jobs to broaden my horizons in an area where my data analysis can influence business decisions, I also want to expand my industry knowledge on implementation of analysis/models and visualisations"\
-    "I am a fast learner, adaptable and love utilising the newest tech."\
-    "In my current role, I have worked mostly solo, providing insights into OHS datasets through our PowerBI dashboard suite"\
+    "I am a fast learner, adaptable and love utilising the newest tech. I am proactive, especially when it comes to optimising business processes."\
+    "In my current role, I have worked mostly solo, providing insights into OHS datasets through our PowerBI dashboard suite, with consultation to the external safety team"\
     "In my past role, I worked within more team orientated enviornment team, building front end visualisations for the teams econometric models"\
     "My first job was in February 2018 with the NSW State Government as an Analyst with a focus on Labour market economics." \
+    "Some notable projects I have worked on are: Extensive storytelling dashboard after the 2019/20 bushfires, outlining how we approached it from a safety perspective and what the impacts were" \
+    "Or how I created connected to external providers incident database to provide live up to date data to safety staff on field incidents" \
+    "Another project was when I created a bot to put thousands of COVID reports into our external providers database via selenium webscraping (as we dont have access to backend)" \
+    "Outside of work I am constantly playing with data, I have built projects from creating calendar appointments via email, to creating NN and logistic regression models for fantasy AFL"\
     "In April 2019 I started my second job when I moved to Melbourne to work for Deparmentment of Enegry, Environment and Climate Action. This is my currennt job."\
     "I have completed the following degrees: Masters in Data Science at James Cook University completed in 2020, Bachelor of Commerce, Finance Economics major completed in 2017 at Griffith University"\
     "I went to primary and high school in South Australia"\
