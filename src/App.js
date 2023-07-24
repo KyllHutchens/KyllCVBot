@@ -84,8 +84,8 @@ function App() {
           Ask it anything related to my personal or professional life <br />
           Not sure what to ask? Hit the Fun Fact button <br />
           <br />
-          This bot is best viewed on a computer, and is mobile device optimisation is currently being worked on
-          The bot is not perfect and may make some strange responses. So I apologise if this happens <br />
+          This bot is best viewed on a computer, and is mobile device optimisation is currently being worked on. <br />
+          Lastly, the bot is not perfect and may make some strange responses. So I apologise if this happens and I would love to hear about them, so I can improve this product! <br />
 
           Website is created in JS React and python flask backend. Using GPT 3.5 turbo from OpenAI for responses
 
