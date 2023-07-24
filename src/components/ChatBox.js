@@ -92,7 +92,6 @@ const ChatBox = () => {
       </div>
       {promptCount >= 3 && (
         <div className="system-message">
-          You have submitted 3 prompts! Check out the system message below:
         </div>
       )}
     </div>
