@@ -22,17 +22,34 @@ const ChatBox = () => {
         const trimmedChatHistory = updatedChatHistory.slice(-5);
 
         setChatHistory(trimmedChatHistory);
+
+        // Increment the prompt count
+        setPromptCount(prevCount => prevCount + 1);
+
+        // Check if the user has submitted 3 prompts
+        if (promptCount + 1 === 3) {
+          // Add the system message after 3 prompts
+          const systemMessage =
+            "System: I appreciate you utilizing my chatbot and learning more about me! I would love to meet with you further! You can email me at kyll.hutchens@gmail.com if you would like to discuss anything you've read today and more! Otherwise, please feel free to continue asking my resume questions.";
+
+          const newSystemMessage = { user: "", ai: systemMessage };
+          const updatedChatWithSystemMessage = [...trimmedChatHistory, newSystemMessage];
+          setChatHistory(updatedChatWithSystemMessage);
+        }
+
         setPageId('');
       })
       .catch(error => {
         console.error('Error:', error);
       });
   };
-    const handleKeyPress = (event) => {
+
+  const handleKeyPress = event => {
     if (event.key === 'Enter') {
       sendPageInfo(); // Trigger the "Send Message" button click
     }
   };
+
   const fetchFunFact = () => {
     axios
       .post('/api/funfact') // Make a POST request to the Flask endpoint
@@ -47,22 +64,6 @@ const ChatBox = () => {
 
         setChatHistory(trimmedChatHistory);
       })
-            setPromptCount(prevCount => prevCount + 1);
-
-      // Check if the user has submitted 4 prompts
-      if (promptCount + 1 === 4) {
-        // Add the system message after 3 prompts
-        const systemMessage = "System: I appreciate you utilizing my chatbot and learning more about me! I would love to meet with you further! You can email me at kyll.hutchens@gmail.com if you would like to discuss anything you've read today and more! Otherwise, please feel free to continue asking questions of my CV.";
-
-        const newChatEntry = { user: "", ai: systemMessage };
-        const updatedChatHistory = [...chatHistory, newChatEntry];
-        const trimmedChatHistory = updatedChatHistory.slice(-5);
-
-        setChatHistory(trimmedChatHistory);
-      }
-
-      setPageId('');
-    })
       .catch(error => {
         console.error('Error:', error);
       });
@@ -86,10 +87,14 @@ const ChatBox = () => {
           onChange={e => setPageId(e.target.value)}
           onKeyDown={handleKeyPress} // Handle Enter key press
         />
-        {promptCount >= 3 && <div className="system-message"></div>}
         <Button onClick={sendPageInfo}>Ask Question</Button>
         <Button onClick={fetchFunFact} variant="secondary">Fun Fact!</Button>
       </div>
+      {promptCount >= 3 && (
+        <div className="system-message">
+          You have submitted 3 prompts! Check out the system message below:
+        </div>
+      )}
     </div>
   );
 };
