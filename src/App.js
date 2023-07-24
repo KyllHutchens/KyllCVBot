@@ -73,7 +73,7 @@ function App() {
         style={{ maxWidth: '180%' }} // Set the desired width using the style prop
       >
         <Modal.Header closeButton>
-          <Modal.Title>Welcome Dablr Recruitment!</Modal.Title>
+          <Modal.Title>Welcome Potential Future Employer!</Modal.Title>
         </Modal.Header>
         <Modal.Body>
 

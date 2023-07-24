@@ -5,6 +5,7 @@ import { Button } from 'react-bootstrap';
 const ChatBox = () => {
   const [pageId, setPageId] = useState('');
   const [chatHistory, setChatHistory] = useState([]);
+  const [promptCount, setPromptCount] = useState(0);
 
   const sendPageInfo = () => {
     axios
@@ -46,6 +47,22 @@ const ChatBox = () => {
 
         setChatHistory(trimmedChatHistory);
       })
+            setPromptCount(prevCount => prevCount + 1);
+
+      // Check if the user has submitted 4 prompts
+      if (promptCount + 1 === 4) {
+        // Add the system message after 3 prompts
+        const systemMessage = "System: I appreciate you utilizing my chatbot and learning more about me! I would love to meet with you further! You can email me at kyll.hutchens@gmail.com if you would like to discuss anything you've read today and more! Otherwise, please feel free to continue asking questions of my CV.";
+
+        const newChatEntry = { user: "", ai: systemMessage };
+        const updatedChatHistory = [...chatHistory, newChatEntry];
+        const trimmedChatHistory = updatedChatHistory.slice(-5);
+
+        setChatHistory(trimmedChatHistory);
+      }
+
+      setPageId('');
+    })
       .catch(error => {
         console.error('Error:', error);
       });
@@ -64,11 +81,12 @@ const ChatBox = () => {
       <div className="input-group">
         <input
           type="text"
-          placeholder="What would you like to ask? Consider asking about projects I've worked on or Why I am looking to change jobs"
+          placeholder="What would you like to ask? Consider asking about projects I've worked on or why I am looking to change jobs"
           value={pageId}
           onChange={e => setPageId(e.target.value)}
           onKeyDown={handleKeyPress} // Handle Enter key press
         />
+        {promptCount >= 3 && <div className="system-message"></div>}
         <Button onClick={sendPageInfo}>Ask Question</Button>
         <Button onClick={fetchFunFact} variant="secondary">Fun Fact!</Button>
       </div>
