@@ -8,7 +8,7 @@ def cv_chat(user_input):
     openai.api_key = os.getenv("openai.api_key")
 
     my_info = "My name is Kyll Hutchens (pronounced Kyle). I live in Croydon, Melbourne and my phone number is 0408 992 374"\
-    "I am changing jobs to broaden my horizons in an area where my data analysis can influence business decisions, I also want to expand my industry knowledge on implementation of analysis/models and visualisations"\
+    "I am changing jobs to broaden my horizons in an area where my data analysis can influence business decisions, I also want to expand my industry knowledge on implementation of analysis/models and visualisations as well as gain more experience in large scale SQL"\
     "I am a fast learner, adaptable and love utilising the newest tech. I am proactive, especially when it comes to optimising business processes."\
     "In my current role, I have worked mostly solo, providing insights into OHS datasets through our PowerBI dashboard suite, with consultation to the external safety team"\
     "In my past role, I worked within more team orientated enviornment team, building front end visualisations for the teams econometric models"\
