@@ -63,10 +63,6 @@ const ChatBox = () => {
         setLoading(false); // Set loading to false in case of an error
       });
   };
-      .catch(error => {
-        console.error('Error:', error);
-      });
-  };
 
   const handleKeyPress = event => {
     if (event.key === 'Enter') {
@@ -129,7 +125,7 @@ const ChatBox = () => {
         </Button>
         <Button onClick={fetchFunFact} variant="secondary">Fun Fact!</Button>
       </div>
-      {promptCount >= 3 && (
+      {promptCount >= 3 && !systemMessageShown && (
         <div className="system-message">
         </div>
       )}
