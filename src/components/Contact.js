@@ -27,7 +27,6 @@ function Contact() {
         <p>
           Name: Kyll Hutchens <br />
           Email: kyll.hutchens@gmail.com <br />
-          Phone: 0408 992 374 <br />
           LinkedIn: <a href="https://www.linkedin.com/in/kyll-hutchens-39323a106/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/kyll-hutchens</a> <br />
           Address: Croydon, Melbourne ... Moving to Adelaide in a few months
         </p>
